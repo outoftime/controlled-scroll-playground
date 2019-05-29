@@ -1,0 +1,59 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.page {
+  border: 2px solid gray;
+  height: 990vh;
+  width: 85vw;
+  margin-bottom: 10vh;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  font-size: 16rem;
+}
+
+.page:nth-child(even) {
+  background-color: lightblue;
+}
+
+.page:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+.sidebar {
+  position: fixed;
+  width: 10vw;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.button {
+  flex: 1 0 25%;
+  text-align: center;
+  line-height: 3em;
+  vertical-align: middle;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button.highlighted {
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+.counter {
+  position: fixed;
+  padding: 2em;
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 10px 5px 5px gray;
+}
