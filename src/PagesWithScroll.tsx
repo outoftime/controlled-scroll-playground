@@ -31,13 +31,6 @@ export class PagesWithScroll extends React.Component<PagesProps, {}> {
   componentDidUpdate() {
     const currentPage = this.inferCurrentPage();
     if (this.props.currentPage !== currentPage) {
-      console.log(
-        "Got currentPage",
-        this.props.currentPage,
-        "different from observed current page",
-        currentPage,
-        "initiating scroll"
-      );
       this.refMap[this.props.currentPage].scrollIntoView({
         behavior: this.props.smoothScroll ? "smooth" : "auto"
       });
@@ -47,12 +40,6 @@ export class PagesWithScroll extends React.Component<PagesProps, {}> {
   handleScroll = () => {
     const currentPage = this.inferCurrentPage();
     if (currentPage !== this.props.currentPage) {
-      console.log(
-        "Updating page after scroll, was",
-        this.props.currentPage,
-        "now",
-        currentPage
-      );
       this.props.onCurrentPageChange(currentPage);
     }
   };
